@@ -22,15 +22,15 @@ python3 -m http.server 8000
 
 ## The contact form (Formspree)
 
-The quote-request form posts to Formspree using the no-signup email endpoint:
+The quote-request form posts to a Formspree form tied to a real Formspree account:
 
 ```
-https://formspree.io/f/wunistudios@gmail.com
+https://formspree.io/f/myeylnlq
 ```
 
-**One-time setup:** submit the form once from the live site (or locally). Formspree will send a confirmation email to `wunistudios@gmail.com` — click the link in it to activate the endpoint. After that, every submission gets emailed there automatically. Until it's confirmed, submissions are held/rejected.
+Submissions are managed from the Formspree dashboard (spam filtering, submission history, notification email, custom "thank you" behavior, etc.) — log in at formspree.io to view them or change where notifications are sent.
 
-If you'd rather manage the form from a Formspree dashboard (spam filtering, submission history, custom "thank you" behavior), create a free account at formspree.io, create a form, and swap the `action` URL in `index.html` (search for `quoteForm`) for your form's `https://formspree.io/f/xxxxxxxx` ID.
+**One-time setup:** submit the form once from the live site (or locally) to confirm it's wired up and check that the notification email arrives. If you ever need to point the site at a different Formspree form, swap the `action` URL in `index.html` (search for `quoteForm`) for the new form's `https://formspree.io/f/xxxxxxxx` endpoint.
 
 ## Placeholders to fill in
 
